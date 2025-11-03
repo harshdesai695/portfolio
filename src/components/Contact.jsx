@@ -19,7 +19,7 @@ const Contact = () => {
           <a href="mailto:harshdesai.hd123@gmail.com">Email</a>
           <a href="https://www.linkedin.com/in/harshdesaihd/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="https://github.com/harshdesai695" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://leetcode.com/harshdesai695/" target="_blank" rel= "noopener noreferrer">LeetCode</a>
+          <a href="https://leetcode.com/u/Harsh_Desai/" target="_blank" rel= "noopener noreferrer">LeetCode</a>
         </div>
       </motion.div>
     </section>
