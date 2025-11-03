@@ -2,6 +2,7 @@
   --primary-color: #1a1a1a;
   --secondary-color: #f0f0f0;
   --accent-color: #646cff;
+  --name-color: #ff6f61;
 }
 
 * {
@@ -20,6 +21,7 @@ html {
 body {
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 #root {
@@ -35,11 +37,13 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  
+  padding: 0 1rem;
 }
 
 .section-container {
   max-width: 1000px;
-  width: 90%;
+  width: 100%; 
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
@@ -64,7 +68,8 @@ h3 {
   margin-bottom: 1rem;
 }
 
-p, li {
+p,
+li {
   font-size: 1rem;
   line-height: 1.7;
 }
@@ -89,16 +94,8 @@ a:hover {
   font-size: 1.8rem;
   margin-top: 1rem;
   text-align: center;
-}
-
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.skill-category {
-  min-width: 200px;
+ 
+  max-width: 65ch;
 }
 
 .contact-links {
@@ -107,6 +104,69 @@ a:hover {
   gap: 2rem;
   font-size: 1.2rem;
 }
+
+
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.project-card {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.2s ease-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card h3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.project-tech {
+  margin-top: auto; 
+  padding-top: 1.5rem; 
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.project-tech-tag {
+  background: var(--accent-color);
+  color: var(--primary-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+
+
+.skills-tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem; 
+  justify-content: center; 
+  padding-top: 1rem;
+}
+
+.skill-tag {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem; /* 8px 16px */
+  border-radius: 9999px; /* This makes it a "pill" */
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: default; 
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+
 
 @media (max-width: 768px) {
   h1 {
@@ -118,12 +178,13 @@ a:hover {
   h3 {
     font-size: 1.2rem;
   }
-  p, li {
+  p,
+  li {
     font-size: 0.9rem;
   }
 
   .section-container {
-    width: 95%;
+    width: 100%; 
     padding: 15px;
     max-height: 90vh;
     overflow-y: auto;
@@ -137,12 +198,8 @@ a:hover {
     font-size: 1.2rem;
   }
 
-  .skills-container {
-    gap: 1.5rem;
-  }
-
-  .skill-category {
-    min-width: 150px;
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 
   .contact-links {
@@ -160,9 +217,5 @@ a:hover {
 
   .hero-p {
     font-size: 1rem;
-  }
-
-  .skill-category {
-    min-width: 100%;
   }
 }

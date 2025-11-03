@@ -10,10 +10,10 @@ const Hero = () => {
         transition={{ duration: 0.8 }}
       >
         <h1 className="hero-h1">
-          Hi, I'm <span style={{ color: 'var(--accent-color)' }}>Harsh Desai</span>
+          Hi, I'm <span style={{ color: 'var(--name-color)' }}>Harsh Desai</span>
         </h1>
         <p className="hero-p">
-          I'm a Software Developer specializing in building robust, <br />
+          I'm a Software Developer specializing in building robust,
           scalable systems and innovative AI solutions.
         </p>
       </motion.div>
