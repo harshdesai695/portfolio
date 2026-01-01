@@ -25,12 +25,26 @@ const cardVariants = {
 
 const projects = [
   {
-    name: 'k8s-agent',
+    name: 'Nova Assistant',
     description:
-      'An agentic AI made with Python using the LangChain framework that helps to manage Kubernetes resources using natural language.',
-    tech: ['Python', 'LangChain', 'Kubernetes'],
-    url: 'https://github.com/harshdesai695/k8s-agent',
+      'A sophisticated AI assistant powered by Azure AI, featuring a modern desktop GUI and voice-activated interface. Supports real-time speech, computer vision, and autonomous tool execution.',
+    tech: ['Python', 'Azure AI', 'FastAPI', 'PyQt6', 'OpenCV'],
+    url: 'https://github.com/harshdesai695/nova-assistant',
   },
+  {
+    name: 'JSON Visualizer',
+    description:
+      'A modern, interactive tool to explore JSON data structures. Features a Monaco-powered code editor, real-time parsing, and node-based visual representations using React Flow.',
+    tech: ['React', 'Monaco Editor', 'React Flow', 'Netlify'],
+    url: 'https://github.com/harshdesai695/json-visualizer',
+  },
+  // {
+  //   name: 'k8s-agent',
+  //   description:
+  //     'An agentic AI made with Python using the LangChain framework that helps to manage Kubernetes resources using natural language.',
+  //   tech: ['Python', 'LangChain', 'Kubernetes'],
+  //   url: 'https://github.com/harshdesai695/k8s-agent',
+  // },
   {
     name: 'MyKart',
     description:
