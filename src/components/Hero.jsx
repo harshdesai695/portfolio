@@ -22,7 +22,7 @@ export default function Hero() {
             <a href="#projects" className="btn-primary">
               <span>View My Work</span>
             </a>
-            <a href="/resume.pdf" download className="btn-primary btn-outline">
+            <a href="/Harsh_Desai_SDE_1_3YOE.pdf" download className="btn-primary btn-outline">
               <span>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight:'0.4rem',verticalAlign:'middle'}}><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 Resume

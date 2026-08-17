@@ -2,7 +2,7 @@ import {
   SiReact, SiSpringboot, SiDocker, SiKubernetes, SiMongodb, SiPostgresql,
   SiPython, SiJavascript, SiTypescript, SiNodedotjs, SiRedis, SiApachekafka,
   SiGit, SiFlutter, SiGraphql, SiElasticsearch, SiMysql, SiJenkins,
-  SiTailwindcss, SiExpress
+  SiTailwindcss, SiExpress, SiNextdotjs, SiFastapi, SiFirebase
 } from 'react-icons/si'
 import { FaJava, FaAws } from 'react-icons/fa'
 
@@ -22,6 +22,7 @@ const categories = [
     title: 'Frontend',
     items: [
       { icon: SiReact, name: 'React' },
+      { icon: SiNextdotjs, name: 'Next.js' },
       { icon: SiFlutter, name: 'Flutter' },
       { icon: SiTailwindcss, name: 'Tailwind CSS' },
       { name: 'HTML/CSS', text: '🎨' },
@@ -32,6 +33,7 @@ const categories = [
     title: 'Backend',
     items: [
       { icon: SiSpringboot, name: 'Spring Boot' },
+      { icon: SiFastapi, name: 'FastAPI' },
       { icon: SiNodedotjs, name: 'Node.js' },
       { icon: SiExpress, name: 'Express.js' },
       { name: 'REST APIs', text: '⚡' },
@@ -44,6 +46,7 @@ const categories = [
       { icon: SiMysql, name: 'MySQL' },
       { icon: SiPostgresql, name: 'PostgreSQL' },
       { icon: SiRedis, name: 'Redis' },
+      { icon: SiFirebase, name: 'Firebase' },
       { icon: SiElasticsearch, name: 'Elasticsearch' },
     ],
   },
@@ -64,8 +67,8 @@ const categories = [
       { icon: SiApachekafka, name: 'Kafka' },
       { icon: SiGit, name: 'Git' },
       { name: 'ELK Stack', text: '📊' },
-      { name: 'LangChain', text: '🔗' },
-      { name: 'OpenAI API', text: '🤖' },
+      { name: 'Azure AI', text: '☁️' },
+      { name: 'Agentic AI', text: '🤖' },
       { name: 'JIRA', text: '📋' },
     ],
   },

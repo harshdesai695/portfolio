@@ -1,6 +1,59 @@
 const projects = [
   {
     id: 1,
+    title: 'kubeSim',
+    subtitle: 'Interactive Kubernetes Simulator',
+    description:
+      'A client-side Kubernetes learning sandbox with a live reconcile loop, interactive cluster canvas, kubectl-style terminal, and simulations for scheduling, RBAC, networking, storage, and multi-cluster operations.',
+    tech: ['Next.js 14', 'TypeScript', 'React Flow', 'Zustand', 'Monaco'],
+    github: 'https://github.com/harshdesai695/kubeSim',
+    live: 'https://kubesim.netlify.app/',
+    accent: '#38bdf8',
+  },
+  {
+    id: 2,
+    title: 'MyGuard',
+    subtitle: 'Gated Community Platform',
+    description:
+      'Full-stack community management platform with resident, guard, and admin experiences across 14 modules, including visitor access, amenities, helpdesk, parking, alerts, and reporting.',
+    tech: ['Flutter', 'Spring Boot', 'Java 21', 'Firebase', 'Firestore'],
+    github: 'https://github.com/harshdesai695/myguard',
+    accent: '#34d399',
+  },
+  {
+    id: 3,
+    title: 'Nova Assistant',
+    subtitle: 'AI Desktop & Voice Assistant',
+    description:
+      'Azure AI-powered assistant with a PyQt6 desktop interface, FastAPI backend, voice interaction, resilient conversation memory, tool calling, and an extensible skills architecture.',
+    tech: ['Python', 'Azure AI', 'FastAPI', 'PyQt6', 'OpenCV'],
+    github: 'https://github.com/harshdesai695/nova-assistant',
+    accent: '#fbbf24',
+  },
+  {
+    id: 4,
+    title: 'JSON Visualizer',
+    subtitle: 'Developer Productivity Tool',
+    description:
+      'Real-time JSON editor and graph visualizer with Monaco validation, auto-formatting, resizable views, theming, and downloadable visualizations.',
+    tech: ['React 19', 'Monaco Editor', 'React Flow', 'Dagre'],
+    github: 'https://github.com/harshdesai695/json-visualizer',
+    live: 'https://visualizerjson.netlify.app/',
+    accent: '#c084fc',
+  },
+  {
+    id: 5,
+    title: 'SysBlueprint',
+    subtitle: 'System Design Learning Platform',
+    description:
+      'Interactive platform covering 15 real-world architectures with explorable diagrams, animated walkthroughs, key metrics, and toggleable plain-language explanations.',
+    tech: ['Next.js 16', 'TypeScript', 'React Flow', 'Zustand'],
+    github: 'https://github.com/harshdesai695/sysblueprint',
+    live: 'https://sysblueprints.netlify.app/',
+    accent: '#fb923c',
+  },
+  {
+    id: 6,
     title: 'MyKart',
     subtitle: 'Gaming E-Commerce Platform',
     description:
@@ -10,37 +63,7 @@ const projects = [
     accent: '#818cf8',
   },
   {
-    id: 2,
-    title: 'JSON Visualizer',
-    subtitle: 'Developer Productivity Tool',
-    description:
-      'Interactive JSON parsing, tree view rendering, and beautification tool. Helps developers debug and understand complex JSON structures instantly.',
-    tech: ['JavaScript', 'React', 'CSS3', 'Tree Algorithms'],
-    live: 'https://visualizerjson.netlify.app/',
-    accent: '#c084fc',
-  },
-  {
-    id: 3,
-    title: 'SysBlueprint',
-    subtitle: 'System Design Platform',
-    description:
-      'System design learning and visualization platform. Explore architecture patterns, scalability strategies, and real-world system designs.',
-    tech: ['TypeScript', 'React', 'MDX', 'System Design'],
-    live: 'https://sysblueprints.netlify.app/',
-    accent: '#fb923c',
-  },
-  {
-    id: 4,
-    title: 'Nova Assistant',
-    subtitle: 'AI-Powered Assistant',
-    description:
-      'Conversational AI assistant built with Python and LangChain. Features context-aware responses, memory management, and tool integrations.',
-    tech: ['Python', 'LangChain', 'OpenAI API', 'AI/ML'],
-    github: 'https://github.com/harshdesai695/nova-assistant',
-    accent: '#34d399',
-  },
-  {
-    id: 5,
+    id: 7,
     title: 'Budget Tracker',
     subtitle: 'Mobile Finance App',
     description:
@@ -50,12 +73,13 @@ const projects = [
     accent: '#f472b6',
   },
   {
-    id: 6,
+    id: 8,
     title: 'Portfolio',
     subtitle: '3D Interactive Website',
     description:
       'This portfolio — built with React, Three.js, and GSAP. Features a 3D interactive scene, scroll-driven animations, and a custom cursor.',
-    tech: ['React 19', 'Three.js', 'GSAP', 'Tailwind CSS'],
+    tech: ['React 19', 'Three.js', 'React Three Fiber', 'GSAP'],
+    github: 'https://github.com/harshdesai695/portfolio',
     live: 'https://harshdesaiportfolio.netlify.app/',
     accent: '#818cf8',
   },

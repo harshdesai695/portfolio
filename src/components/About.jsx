@@ -37,12 +37,12 @@ export default function About() {
 
           <div className="about-metrics reveal">
             {[
-              { value: '2.5+', label: 'Years Experience' },
+              { value: '3+', label: 'Years Experience' },
               { value: '5/5', label: 'Performance Rating' },
               { value: '700+', label: 'Services Migrated' },
               { value: '80%', label: 'Debug Time Reduced' },
               { value: '433+', label: 'LeetCode Solved' },
-              { value: '1.1K+', label: 'GitHub Contributions' },
+              { value: '557', label: 'Contributions (Last Year)' },
             ].map(m => (
               <div key={m.label} className="metric-card">
                 <span className="metric-value">{m.value}</span>

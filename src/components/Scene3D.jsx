@@ -1,4 +1,4 @@
-import { useRef, useMemo } from 'react'
+import { Suspense, useRef, useMemo } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Float, RoundedBox, Text } from '@react-three/drei'
 import * as THREE from 'three'
@@ -75,6 +75,27 @@ function GridFloor() {
       args={[30, 30, '#1a1a2e', '#1a1a2e']}
       position={[0, -3.5, 0]}
     />
+  )
+}
+
+function HeroWorkspace() {
+  const groupRef = useRef()
+
+  useFrame(() => {
+    if (groupRef.current) {
+      groupRef.current.visible = window.scrollY < window.innerHeight
+    }
+  })
+
+  return (
+    <group ref={groupRef}>
+      <GridFloor />
+      <group position={[1.2, -0.3, -0.5]} scale={0.95}>
+        <Monitor />
+        <Keyboard />
+        <CoffeeMug />
+      </group>
+    </group>
   )
 }
 
@@ -228,7 +249,7 @@ function FloatingBrackets() {
             position={b.pos}
             fontSize={b.size}
             color={b.color}
-            font="https://fonts.gstatic.com/s/jetbrainsmono/v20/tDbY2o-flEEny0FZhsfKu5WU4xD-IQ-PuZJJXxfpAO-.woff2"
+            font="https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxM.woff"
             anchorX="center"
             anchorY="middle"
             material-transparent
@@ -247,8 +268,9 @@ function FloatingBrackets() {
    ═══════════════════════════════════════════ */
 
 function SceneContent() {
-  const { camera } = useThree()
+  const { camera, size } = useThree()
   const initialY = useRef(camera.position.y)
+  const isCompact = size.width <= 768
 
   useFrame(() => {
     const scrollPct = window.scrollY / (document.body.scrollHeight - window.innerHeight || 1)
@@ -264,23 +286,30 @@ function SceneContent() {
       <pointLight position={[3, -1, -3]} color="#c084fc" intensity={0.2} />
 
       {/* === Background atmosphere === */}
-      <FloatingShape position={[-4, 2, -5]} geometry="icosahedron" color="#818cf8" speed={0.5} />
-      <FloatingShape position={[4.5, -1.5, -6]} geometry="octahedron" color="#c084fc" speed={0.7} />
-      <FloatingShape position={[-3, -2.5, -4.5]} geometry="torus" color="#818cf8" speed={0.4} />
-      <FloatingShape position={[3.5, 3, -7]} geometry="dodecahedron" color="#c084fc" speed={0.6} />
+      {isCompact ? (
+        <>
+          <FloatingShape position={[1.5, 2.4, -5]} geometry="icosahedron" color="#818cf8" speed={0.5} />
+          <FloatingShape position={[-1.5, -2.8, -5.5]} geometry="torus" color="#c084fc" speed={0.4} />
+        </>
+      ) : (
+        <>
+          <FloatingShape position={[-4, 2, -5]} geometry="icosahedron" color="#818cf8" speed={0.5} />
+          <FloatingShape position={[4.5, -1.5, -6]} geometry="octahedron" color="#c084fc" speed={0.7} />
+          <FloatingShape position={[-3, -2.5, -4.5]} geometry="torus" color="#818cf8" speed={0.4} />
+          <FloatingShape position={[3.5, 3, -7]} geometry="dodecahedron" color="#c084fc" speed={0.6} />
+        </>
+      )}
 
-      <Particles count={250} />
-      <GridFloor />
-
+      <Particles count={isCompact ? 140 : 250} />
       {/* === Developer workspace (right side, slightly forward) === */}
-      <group position={[1.2, -0.3, -0.5]} scale={0.95}>
-        <Monitor />
-        <Keyboard />
-        <CoffeeMug />
-      </group>
+      {!isCompact && <HeroWorkspace />}
 
       {/* === Floating code brackets (surrounding everything) === */}
-      <FloatingBrackets />
+      {!isCompact && (
+        <Suspense fallback={null}>
+          <FloatingBrackets />
+        </Suspense>
+      )}
     </>
   )
 }
