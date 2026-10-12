@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { RESUME_URL } from '../config'
 
 const navLinks = [
   { label: 'About', href: '#about' },
@@ -50,7 +51,7 @@ export default function Navbar() {
             <span>Let's Talk</span>
           </a>
 
-          <a href="/Harsh_Desai_SDE_1_3YOE.pdf" download className="nav__resume" aria-label="Download resume">
+          <a href={RESUME_URL} target="_blank" rel="noopener noreferrer" className="nav__resume" aria-label="View resume">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           </a>
 
